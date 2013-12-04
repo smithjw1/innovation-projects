@@ -39,30 +39,46 @@
 |							- good for ensuring strict SQL while developing
 |
 | The $active_group variable lets you choose which connection group to
-| make active.  By default there is only one group (the 'default' group).
+| make active.  By default there is only one group (the 'development' group).
 |
 | The $active_record variables lets you determine whether or not to load
 | the active record class
 */
 
-$active_group = 'default';
+$active_group = ENVIRONMENT;
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
+$db['development']['hostname'] = 'localhost';
+$db['development']['username'] = 'root';
+$db['development']['password'] = 'root';
+$db['development']['database'] = 'iprojects';
+$db['development']['dbdriver'] = 'mysql';
+$db['development']['dbprefix'] = '';
+$db['development']['pconnect'] = TRUE;
+$db['development']['db_debug'] = TRUE;
+$db['development']['cache_on'] = FALSE;
+$db['development']['cachedir'] = '';
+$db['development']['char_set'] = 'utf8';
+$db['development']['dbcollat'] = 'utf8_general_ci';
+$db['development']['swap_pre'] = '';
+$db['development']['autoinit'] = TRUE;
+$db['development']['stricton'] = FALSE;
+
+$db['production']['hostname'] = 'internal-db.s47152.gridserver.com';
+$db['production']['username'] = 'db47152_mwcom';
+$db['production']['password'] = '5hSwMJh3h1qtIcB';
+$db['production']['database'] = 'db47152_mwutil';
+$db['production']['dbdriver'] = 'mysql';
+$db['production']['dbprefix'] = '';
+$db['production']['pconnect'] = TRUE;
+$db['production']['db_debug'] = TRUE;
+$db['production']['cache_on'] = FALSE;
+$db['production']['cachedir'] = '';
+$db['production']['char_set'] = 'utf8';
+$db['production']['dbcollat'] = 'utf8_general_ci';
+$db['production']['swap_pre'] = '';
+$db['production']['autoinit'] = TRUE;
+$db['production']['stricton'] = FALSE;
 
 
 /* End of file database.php */
