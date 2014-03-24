@@ -15,7 +15,7 @@ class Project_model extends CI_Model {
     
     function get_projects($where = '1=1') 
     	{
-		$query = $this->db->query('SELECT * FROM projects WHERE '.$where);
+		$query = $this->db->query('SELECT projects.*, (project_path.id is not null) as has_path FROM projects left join project_path on projects.id = project_path.marker_id where '.$where.' group by projects.id');
 	    $projects = $query->result_array();
 	    return $projects;
 		}

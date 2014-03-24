@@ -748,6 +748,7 @@ ul.component-list li.img span.icon:before, .icon-picture:before {
  width: 870px;
  height: 870px;
  background: transparent url(images/grid.png) no-repeat center center;
+ background-size: contain;
  position: relative;
 }
 
@@ -798,7 +799,7 @@ ul.component-list li.img span.icon:before, .icon-picture:before {
 #grid.path .path {
  opacity: 1
 }
-#grid.path .path .marker {background: #CCC}
+#grid.path .subject .marker, #grid.path .path .marker {background: red}
 
 #list {
  list-style: none;

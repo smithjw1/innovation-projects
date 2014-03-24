@@ -28,7 +28,9 @@
 				<?php if($project['status'] == 'p' && $staff):?>
 				<a href="/innovation-projects/ip/approve_project/<?= $project['id'] ?>" id="approve-project">Approve</a>
 				<? endif; ?>
+				<?php if($project['has_path']):?>
 				<a href="#showpath" class="show-path" data-project-id="<?= $project['id'] ?>">Show Path</a>
+				<? endif; ?>
 			</div>
 		</div>
 		<form class="note" onsubmit="return false;">
